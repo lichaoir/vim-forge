@@ -1,4 +1,6 @@
 :set number
+:set tabstop=2
+:set expandtab
 :set shiftwidth=2
 :set shiftround
 :set notimeout
@@ -19,9 +21,13 @@
 " For wrapping selected text with pair of characters
 :vnoremap <leader>w" <esc>`<i"<esc>`>a"<esc>
 :vnoremap <leader>w' <esc>`<i'<esc>`>a'<esc>
+:vnoremap <leader>w` <esc>`<i`<esc>`>a`<esc>
 :vnoremap <leader>w{ <esc>`<i{<esc>`>a}<esc>
 :vnoremap <leader>w} <esc>`<i{<esc>`>a}<esc>
 :vnoremap <leader>w( <esc>`<i(<esc>`>a)<esc>
 :vnoremap <leader>w) <esc>`<i(<esc>`>a)<esc>
 
 " Continue with Operator-Pending Mappings next time...
+
+" Plugins:
+" tpope/vim-commentary
