@@ -148,6 +148,16 @@
 
 `<c-^>` Toggle between current buffer (%) and alternate buffer (#)
 
+`edit!` Revert changes
+
+`qall` Quit all windows
+
+`wall` Write all modified buffers to disk
+
+### Hidden Setting
+
+Check `:help 'hidden'`
+
 ## Argument List
 
 `:args {arglist}` Populate the argument list
@@ -165,3 +175,53 @@
 ## Wildcards
 
 Check `:help wildcard`
+
+## Split Windows
+
+`<c-w>s` Split horizontally
+
+`<c-w>v` Split vertically
+
+`:sp[lit] {file}` Split the current window horizontally, loading {file} into the new window
+
+`:vsp[lit] {file}` Split the current window vertically, loading {file} into the new window
+
+`<c-w>w` `<c-w><c-w>` Cycle between windows
+
+`<c-w>h` / `<c-w>l` / `<c-w>j` / `<c-w>k` Focus the window to the left / to the right / below / above
+
+`close` `<c-w>c` Close the active window
+
+`only` `<c-w>o` Keep only the active window, closing all others
+
+`<c-w>=` Equalize width and height of all windows
+
+`<c-w>_` Maximize height of the active window
+
+`<c-w>|` Maximize width of the active window
+
+`[N]<c-w>_` Set active window height to [N] rows
+
+`[N]<c-w>|` Set active window width to [N] columns
+
+`:lcd` Set the current directory for the current window
+
+## Tabs
+
+`windo {cmd}`	Execute {cmd} in each window in the current tab page
+
+`:tabe[dit] {filename}` Open {filename} in a new tab
+
+`<c-w>T` Move the current window into its own tab
+
+`tabc[lose]` Close the current tab page and all of its windows
+
+`:tabo[nly]` Keep the active tab page, closing all others
+
+`:tabn[ext] {N}` `{N}gt` Switch to tab page number {N}
+
+`:tabn[ext]` `gt` Switch to the next tab page
+
+`:tabp[revious]` `gT` Switch to the previous tab page
+
+`:tabmove [N]` Rearrange tab
