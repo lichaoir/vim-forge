@@ -108,7 +108,7 @@
 
 `:[range]!{filter}` Filter the specified [range] through external program {filter} 
 
-## Address
+## Addresses
 
 `1` First line of the file
 
@@ -133,3 +133,35 @@
 `q:` Open the command-line window with history of Ex commands
 
 `ctrl-f` Switch from Command-Line mode to the command-line window
+
+# Files
+
+## Buffers
+
+`:ls` List buffers
+
+`:bnext` / `:bprevious` / `:bfirst` / `:blast` Next buffer / Previous buffer / First buffer / Last buffer
+
+`[N, M] :bdelete [N1, N2, N3, ...]` Delete buffers
+
+`:buffer {bufname | N}` Go to buffer
+
+`<c-^>` Toggle between current buffer (%) and alternate buffer (#)
+
+## Argument List
+
+`:args {arglist}` Populate the argument list
+
+`:args` Show the argument list
+
+`:next` `:prev` Traverse files in the argument list
+
+`:argdo {cmd}` Execute {cmd} for each file in the argument list
+
+### Backtick Expansion
+
+``:args `{shell command}` `` Execute {shell command} and use the output as the argument to `:args` command
+
+## Wildcards
+
+Check `:help wildcard`
