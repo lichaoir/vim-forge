@@ -27,8 +27,14 @@
 :vnoremap <leader>w( <esc>`<i(<esc>`>a)<esc>
 :vnoremap <leader>w) <esc>`<i(<esc>`>a)<esc>
 
-" Continue with Operator-Pending Mappings next time...
+call plug#begin()
 
-" Plugins:
-" tpope/vim-commentary
-" tpope/unimpaired
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
+Plug 'derekwyatt/vim-scala'
+
+call plug#end()
+
+let g:deoplete#enable_at_startup = 1
