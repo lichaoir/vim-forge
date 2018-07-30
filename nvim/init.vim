@@ -29,6 +29,7 @@
 
 call plug#begin()
 
+Plug 'morhetz/gruvbox'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -36,5 +37,8 @@ Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
 Plug 'derekwyatt/vim-scala'
 
 call plug#end()
+
+colorscheme gruvbox
+set background=dark
 
 let g:deoplete#enable_at_startup = 1
