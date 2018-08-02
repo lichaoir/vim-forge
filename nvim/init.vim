@@ -33,8 +33,6 @@ vnoremap <leader>w( <esc>`<i(<esc>`>a)<esc>
 vnoremap <leader>w) <esc>`<i(<esc>`>a)<esc>
 
 " Finger health
-nnoremap <m-r> <c-r>
-
 inoremap <m-n> <c-n>
 inoremap <m-p> <c-p>
 
