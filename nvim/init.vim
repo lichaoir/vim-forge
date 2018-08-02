@@ -42,6 +42,7 @@ inoremap <m-p> <c-p>
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -56,6 +57,15 @@ set background=dark
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+call deoplete#custom#option('sources', {
+\  '_': ['buffer', 'member', 'tag', 'file', 'omni']
+\})
+
+call deoplete#custom#var('omni', 'input_patterns', {
+\  'scala': '[^. *\t]\.\w*'
+\}) 
+      
 
 " fzf
 nnoremap <leader>ff :FZF<cr>
