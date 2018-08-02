@@ -98,7 +98,11 @@
 
 ## Shell
 
-`:shell` Start a shell (return to Vim by typing exit) 
+`:shell` Start a shell (return to Vim by typing exit)
+
+`:terminal` Open terminal in neovim
+
+`<c-\><c-n>` Exit Terminal mode
 
 `:!{cmd}` Execute {cmd} with the shell
 
@@ -205,6 +209,10 @@ Check `:help wildcard`
 `[N]<c-w>|` Set active window width to [N] columns
 
 `:lcd` Set the current directory for the current window
+
+`'winfixheight' 'wfh'` Keep the window height when windows are opened or closed
+
+`'winfixwidth' 'wfw'` Keep the window width when windows are opened or closed
 
 ## Tabs
 
