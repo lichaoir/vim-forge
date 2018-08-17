@@ -34,13 +34,20 @@ nnoremap <leader>w= <c-w>=
 nnoremap <leader>w_ <c-w>_
 nnoremap <leader>w\| <c-w>\|
 
-" Buffer
-nnoremap <leader>bb :buffer<space>#<cr>
-
-" Terminal
+" ## Terminal
 nnoremap <leader>wts :split +terminal<cr><c-w>J10<c-w>_:set wfh<cr>
 nnoremap <leader>wtm :split +terminal<cr><c-w>J20<c-w>_:set wfh<cr>
 nnoremap <leader>wtl :split +terminal<cr><c-w>J30<c-w>_:set wfh<cr>
+
+" Buffer
+nnoremap <leader>bb :buffer<space>#<cr>
+nnoremap <leader>bd :buffer<space>#<cr>:bdelete<space>#<cr>
+
+" ## Terminal
+nnoremap <leader>bts :split<cr>:buffer<space>term://<cr><c-w>J10<c-w>_:set wfh<cr>
+nnoremap <leader>btm :split<cr>:buffer<space>term://<cr><c-w>J20<c-w>_:set wfh<cr>
+nnoremap <leader>btl :split<cr>:buffer<space>term://<cr><c-w>J30<c-w>_:set wfh<cr>
+
 
 " Wrap selected text with pair of characters
 vnoremap <leader>w" <esc>`<i"<esc>`>a"<esc>
