@@ -8,6 +8,8 @@ set ignorecase
 set smartcase
 set hidden
 set previewheight=20
+set cursorline
+set termguicolors
 
 let mapleader=" "
 let maplocalleader="\\"
@@ -24,6 +26,7 @@ nnoremap <leader>wk <c-w>k
 nnoremap <leader>wh <c-w>h
 nnoremap <leader>wl <c-w>l
 nnoremap <leader>wc <c-w>c
+nnoremap <leader>wo <c-w>o
 nnoremap <leader>wJ <c-w>J
 nnoremap <leader>wK <c-w>K
 nnoremap <leader>wH <c-w>H
@@ -62,14 +65,17 @@ vnoremap <leader>w) <esc>`<i(<esc>`>a)<esc>
 inoremap <m-n> <c-n>
 inoremap <m-p> <c-p>
 
+" System clipboard
+vnoremap <leader>C "*y
+nnoremap <leader>P "*p
+
 " Manage Plugins
 call plug#begin()
 
 Plug 'arcticicestudio/nord-vim'
-Plug 'cocopon/iceberg.vim'
-Plug 'morhetz/gruvbox'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'trevordmiller/nova-vim'
+Plug 'cocopon/iceberg.vim'
+Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug '/usr/local/opt/fzf'
@@ -81,14 +87,19 @@ Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
-" colorscheme gruvbox
-" set background=dark
+" colorscheme nord
+" let g:airline_theme='nord'
 
-" colorscheme iceberg
-" let g:airline_theme='iceberg'
+" colorscheme nova
+" let g:airline_theme='nova'
 
-colorscheme nord
-let g:airline_theme='nord'
+colorscheme iceberg
+let g:airline_theme='iceberg'
+
+" let ayucolor="light"
+" let ayucolor="mirage"
+" let ayucolor="dark"
+" colorscheme ayu
 
 " airline
 " let g:airline#extensions#tabline#enabled = 1
@@ -111,3 +122,6 @@ nnoremap <leader>fb :Buffers<cr>
 nnoremap <leader>fp :Files<space>
 nnoremap <leader>fl :BLines<cr>
 nnoremap <leader>fL :Lines<cr>
+
+" fugitive 
+nnoremap <leader>gs :Gstatus<cr>
