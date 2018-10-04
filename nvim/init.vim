@@ -10,6 +10,7 @@ set hidden
 set previewheight=20
 set cursorline
 set termguicolors
+set scrollback=-1
 
 let mapleader=" "
 let maplocalleader="\\"
@@ -38,13 +39,13 @@ nnoremap <leader>w_ <c-w>_
 nnoremap <leader>w\| <c-w>\|
 
 " ## Terminal
-nnoremap <leader>wts :split +terminal<cr><c-w>J10<c-w>_:set wfh<cr>
-nnoremap <leader>wtm :split +terminal<cr><c-w>J20<c-w>_:set wfh<cr>
-nnoremap <leader>wtl :split +terminal<cr><c-w>J30<c-w>_:set wfh<cr>
+nnoremap <leader>ts :split +terminal<cr><c-w>J10<c-w>_:set wfh<cr>
+nnoremap <leader>tm :split +terminal<cr><c-w>J20<c-w>_:set wfh<cr>
+nnoremap <leader>tl :split +terminal<cr><c-w>J30<c-w>_:set wfh<cr>
 
 " Buffer
 nnoremap <leader>bb :buffer<space>#<cr>
-nnoremap <leader>bd :buffer<space>#<cr>:bdelete<space>#<cr>
+nnoremap <leader>bd :bprevious<cr>:bdelete<space>#<cr>
 
 " ## Terminal
 nnoremap <leader>bts :split<cr>:buffer<space>term://<cr><c-w>J10<c-w>_:set wfh<cr>
@@ -76,6 +77,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'trevordmiller/nova-vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug '/usr/local/opt/fzf'
@@ -93,13 +95,16 @@ call plug#end()
 " colorscheme nova
 " let g:airline_theme='nova'
 
-colorscheme iceberg
-let g:airline_theme='iceberg'
+" colorscheme iceberg
+" let g:airline_theme='iceberg'
 
 " let ayucolor="light"
 " let ayucolor="mirage"
 " let ayucolor="dark"
 " colorscheme ayu
+
+syntax enable
+colorscheme OceanicNext
 
 " airline
 " let g:airline#extensions#tabline#enabled = 1
@@ -118,6 +123,7 @@ call deoplete#custom#var('omni', 'input_patterns', {
 " fzf
 nnoremap <leader>ff :FZF<cr>
 nnoremap <leader>fa :Ag<space>
+nnoremap <leader>fra :Ag<up><cr>
 nnoremap <leader>fb :Buffers<cr>
 nnoremap <leader>fp :Files<space>
 nnoremap <leader>fl :BLines<cr>
